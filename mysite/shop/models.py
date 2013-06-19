@@ -22,7 +22,14 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=20, decimal_places=5)
     count = models.IntegerField()
     group = models.ForeignKey(Product_group)
-    
+    image = models.ImageField(upload_to='images', blank=True)
+    def show_image(self):
+        if self.image:
+            return '<img src="%s"/ width="120" height="120" alt="Image not found">' % self.image.url
+        else:
+            return '<img src="/media/images/default.jpg"/ width="120" height="120" alt="Image not found">'
+    show_image.allow_tags = True
+
     def __unicode__(self):
         return u'%s %s %s %s %s' %(self.serial_number, self.name, self.price, self.count, self.group)
 	

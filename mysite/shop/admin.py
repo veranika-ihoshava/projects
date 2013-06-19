@@ -6,7 +6,7 @@ class UserAdmin(admin.ModelAdmin):
     search_fields = ('name', 'login')
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('serial_number', 'name', 'price', 'count', 'group')
+    list_display = ('serial_number', 'name', 'price', 'count', 'group', 'show_image')
     search_fields = ('serial_number', 'name')
     list_filter = ('group',)
     raw_id_fields = ('group',)
