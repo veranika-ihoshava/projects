@@ -9,6 +9,7 @@
             <th>#</th>
             <th>Name</th>
             <th>Description</th>
+            <th>Image</th>
         </tr>
     </thead>
     <tbody>
@@ -17,6 +18,12 @@
             <td>{{ product.id }}</td>
             <td>{{ product.name }}</td>
             <td>{{ product.description }}</td>
+            {% if product.image %}
+                <td><img src="/media/{{ product.image }}" width="120" height="120"></td>
+            {% else %}
+                <td><img src="/media/images/default.jpg" width="120" height="120" alt="Image not found"></td>
+            {% endif %}
+
         </tr>
 {% endfor %}
     </tbody>
