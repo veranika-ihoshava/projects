@@ -4,6 +4,8 @@
         <title>{% block title %}{% endblock %}</title>
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    {% load staticfiles %}
+    <img src='{% static '/static/images/default.jpg' %}' alt='default image'/>
     </head>
 
     <body>

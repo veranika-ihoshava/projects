@@ -13,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-{% for product in object_list %}
+{% for product in product_list %}
         <tr class="success">
             <td>{{ product.id }}</td>
             <td>{{ product.name }}</td>
@@ -21,7 +21,7 @@
             {% if product.image %}
                 <td><img src="/media/{{ product.image }}" width="120" height="120"></td>
             {% else %}
-                <td><img src="/media/images/default.jpg" width="120" height="120" alt="Image not found"></td>
+                <td><img src="/static/images/default.jpg" width="120" height="120" alt="Image not found"></td>
             {% endif %}
 
         </tr>

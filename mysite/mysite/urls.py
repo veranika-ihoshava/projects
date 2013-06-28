@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.conf import settings
 from django.conf.urls.static import static
-from shop.models import Product
+from shop.models import Product, Product_group
 from django.views.generic import ListView
 from shop.views import hello
 
@@ -22,5 +22,10 @@ urlpatterns = patterns('',
     url(r'^hello/$', hello),
     (r'^product/$', ListView.as_view(
         model=Product,
+        context_object_name='product_list',
     )),
-)+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    (r'^groups/$', ListView.as_view(
+        queryset=Product_group.objects.order_by('name'),
+        context_object_name='groups'
+    ))
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

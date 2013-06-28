@@ -27,7 +27,7 @@ class Product(models.Model):
         if self.image:
             return '<img src="%s" width="120" height="120" alt="Product image">' % self.image.url
         else:
-            return '<img src="/media/images/default.jpg" width="120" height="120" alt="Image not found">'
+            return '<img src="/static/images/default.jpg" width="120" height="120" alt="Image not found">'
     show_image.allow_tags = True
 
     def __unicode__(self):
