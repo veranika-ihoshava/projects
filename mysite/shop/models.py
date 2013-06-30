@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 class User(models.Model):
     name = models.CharField(max_length = 200)
@@ -38,3 +39,9 @@ class Order(models.Model):
     products = models.ManyToManyField(Product)
     def __unicode__(self):
         return unicode(self.user)
+
+class Application(models.Model):
+    username = models.CharField(max_length = 100)
+    surname = models.CharField(max_length = 100)
+    login = models.EmailField('E-mail', max_length = 100)
+    applied_date = models.DateTimeField(blank = True)
