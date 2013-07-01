@@ -7,9 +7,7 @@ def apply_form(request):
     if request.method == 'POST':
         form = ApplicationForm(request.POST)
         if form.is_valid():
-            instance = form.save(commit = False)
-            instance.applied_date = datetime.datetime.now()
-            instance.save()
+            form.save()
             return HttpResponse('Saved to database')
         else:
             form = ApplicationForm()
