@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/shop/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="53" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
+            <state line="12" column="43" selection-start="432" selection-end="432" vertical-scroll-proportion="0.25801012">
               <folding />
             </state>
           </provider>
@@ -49,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/shop/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="47" selection-start="448" selection-end="448" vertical-scroll-proportion="0.25801012">
+            <state line="11" column="47" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,9 +102,9 @@
         <option value="$PROJECT_DIR$/mysite/mysite/urls.py" />
         <option value="$PROJECT_DIR$/mysite/shop/models.py" />
         <option value="$PROJECT_DIR$/mysite/shop/templates/shop/application_form.html" />
-        <option value="$PROJECT_DIR$/mysite/shop/views.py" />
         <option value="$PROJECT_DIR$/mysite/shop/admin.py" />
         <option value="$PROJECT_DIR$/mysite/shop/forms.py" />
+        <option value="$PROJECT_DIR$/mysite/shop/views.py" />
       </list>
     </option>
   </component>
@@ -140,16 +140,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,6 +258,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,7 +349,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31685576" sideWeight="0.79126215" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32252836" sideWeight="0.79126215" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -424,21 +424,19 @@
         <state line="14" column="21" selection-start="326" selection-end="326" vertical-scroll-proportion="-9.153846" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/shop/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="53" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/shop/templates/shop/application_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="19" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="19" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/shop/templates/shop/product_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/shop/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="47" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/shop/models.py">
@@ -453,14 +451,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/shop/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="20" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="28" column="20" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/shop/forms.py">
+    <entry file="file://$PROJECT_DIR$/mysite/shop/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="47" selection-start="448" selection-end="448" vertical-scroll-proportion="0.25801012">
+        <state line="12" column="43" selection-start="432" selection-end="432" vertical-scroll-proportion="0.25801012">
           <folding />
         </state>
       </provider>
