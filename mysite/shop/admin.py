@@ -19,11 +19,17 @@ class OrderAdmin(admin.ModelAdmin):
     raw_id_fields = ('user',)
     filter_horizontal = ('products',)
 
-class Applications(admin.ModelAdmin):
-    list_display = ('username', 'surname', 'login', 'applied_date')
+class ApplicationAdmin(admin.ModelAdmin):
+    readonly_fields = ('login', 'username', 'surname', 'applied_date', 'checked')
+    list_display = ('login', 'username', 'surname', 'applied_date')
+
+    def has_add_permission(self, request):
+        return False
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 admin.site.register(User, UserAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Product_group, Product_groupAdmin)
 admin.site.register(Order, OrderAdmin)
-admin.site.register(Application, Applications)
+admin.site.register(Application, ApplicationAdmin)

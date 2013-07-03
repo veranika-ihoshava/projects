@@ -41,7 +41,8 @@ class Order(models.Model):
         return unicode(self.user)
 
 class Application(models.Model):
-    username = models.CharField(max_length = 100)
-    surname = models.CharField(max_length = 100)
+    username = models.CharField(max_length = 100, blank=True)
+    surname = models.CharField(max_length = 100, blank=True)
     login = models.EmailField('E-mail', max_length = 100)
     applied_date = models.DateTimeField(auto_now_add=True)
+    checked = models.BooleanField()

@@ -7,12 +7,12 @@
 
     <body>
         <H3>Please, enter your information and we`ll send you a email when our shop is opened!</H3>
-        <!--
-        {% if form.errors %}            ------------ does not work ------------
+
+        {% if form.errors %}
         <p style="color: red;">
             Please correct the error{{ form.errors|pluralize }} below.
         </p>
-        {% endif %}-->
+        {% endif %}
 
         <form action="" method="post">{% csrf_token %}
             <table>{{ form.as_table}}</table>
