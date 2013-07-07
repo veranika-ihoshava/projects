@@ -3,7 +3,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from shop.models import Product, Product_group
 from django.views.generic import ListView
-from shop.views import apply_form
+from shop.views import apply_form, add_to_basket
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -19,7 +19,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    (r'^product/$', ListView.as_view(
+    (r'^products/$', ListView.as_view(
         model=Product,
         context_object_name='product_list',
     )),
@@ -28,4 +28,5 @@ urlpatterns = patterns('',
         context_object_name='groups'
     )),
     url(r'^apply/$', apply_form),
+    url(r'^products/add/$', add_to_basket),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
