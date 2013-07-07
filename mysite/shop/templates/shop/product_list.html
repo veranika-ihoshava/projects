@@ -17,10 +17,7 @@
         <tr class="success">
             <td>{{ product.id }}</td>
             <td>{{ product.name }}
-                <form action="add/" method="GET">
-                    <input type="hidden" name="product_id" value="{{ product.id }}">
-                    <br> <input type="submit" value="Добавить в корзину">
-                </form>
+                <br><a href="{% url 'shop.views.add_to_basket' product.id %}">Добавить в корзину</a>
             </td>
             <td>{{ product.description }}</td>
             {% if product.image %}

@@ -28,5 +28,5 @@ urlpatterns = patterns('',
         context_object_name='groups'
     )),
     url(r'^apply/$', apply_form),
-    url(r'^products/add/$', add_to_basket),
+    url(r'^products/(?P<product_id>\d{1,4})/add/$', add_to_basket),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

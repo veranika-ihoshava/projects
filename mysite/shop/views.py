@@ -2,6 +2,7 @@ from forms import ApplicationForm
 from django.http.response import HttpResponse, HttpResponseRedirect
 from models import Product
 from django.shortcuts import render
+from django.views.decorators.http import require_GET
 
 
 def apply_form(request):
@@ -14,15 +15,12 @@ def apply_form(request):
         form = ApplicationForm()
     return render(request, 'shop/application_form.html', {'form': form})
 
-def add_to_basket(request):
-    if request.method == 'GET':
-        if request.GET.get('product_id'):
-            new_product_id = request.GET.get('product_id')
-            if Product.objects.filter(id=new_product_id).exists():
-                if request.session.get('product_id'):
-                    request.session.get('product_id').append(new_product_id)
-                    request.session.modified = True
-                    return HttpResponseRedirect('/products/')
-                request.session['product_id'] = [new_product_id]
-                return HttpResponseRedirect('/products/')
-    return HttpResponse('Cheeeaateeeeer!')
+@require_GET
+def add_to_basket(request, product_id = 'product_id'):
+    if Product.objects.filter(id=product_id).exists():
+        if 'product_id' in request.session:
+            request.session.get('product_id').append(product_id)
+            request.session.modified = True
+        else:
+            request.session['product_id'] = [product_id]
+    return HttpResponseRedirect('/products/')
