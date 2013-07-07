@@ -22,11 +22,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/shop/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="32" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="26" column="54" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.7713787">
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,10 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="33" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.7329843">
+            <state line="29" column="33" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -126,8 +128,8 @@
         <option value="$PROJECT_DIR$/mysite/shop/templates/base.html" />
         <option value="$PROJECT_DIR$/mysite/shop/templates/shop/application_form.html" />
         <option value="$PROJECT_DIR$/mysite/shop/templates/shop/product_list.html" />
-        <option value="$PROJECT_DIR$/mysite/shop/views.py" />
         <option value="$PROJECT_DIR$/mysite/mysite/urls.py" />
+        <option value="$PROJECT_DIR$/mysite/shop/views.py" />
       </list>
     </option>
   </component>
@@ -470,11 +472,6 @@
         <state line="27" column="0" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.30357143" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/shop/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="32" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/mysite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="119" column="18" selection-start="4620" selection-end="4620" vertical-scroll-proportion="0.0" />
@@ -512,9 +509,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="33" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.7329843">
+        <state line="29" column="33" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/shop/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="54" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.7713787">
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
