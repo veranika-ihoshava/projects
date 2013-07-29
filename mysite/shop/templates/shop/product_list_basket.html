@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h3>Products in basket</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+
+    {% if not product_list %}
+        <h4>Your basket is empty :(</h4>
+    {% else %}
+        {% for product in product_list %}
+                <tr class="success">
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.name }}
+                        <br><a href="{% url 'shop.views.delete_from_basket' product.id %}">Удалить из корзины</a>
+                    </td>
+                    <td>{{ product.description }}</td>
+                    {% if product.image %}
+                        <td><img src="/media/{{ product.image }}" width="120" height="120"></td>
+                    {% else %}
+                        <td><img src="/static/images/default.jpg" width="120" height="120" alt="Image not found"></td>
+                    {% endif %}
+
+                </tr>
+        {% endfor %}
+            </tbody>
+
+        </table>
+    {% endif %}
+
+{% endblock %}
