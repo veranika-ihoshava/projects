@@ -38,9 +38,10 @@ def delete_from_basket(request, product_id='product_id'):
 def session_products(request, product_id='product_id'):
     if product_id in request.session:
         product_id_list = request.session.get(product_id)
-        Product.objects.filter(id__in=product_id_list)
+        product_list = list(Product.objects.filter(id__in=product_id_list).values('id', 'name', 'price', 'image', 'description'))
+        product_list.append({'id': 555})
         return render(request, 'shop/product_list_basket.html',
-                  {'product_list': Product.objects.filter(id__in=product_id_list)})
+                  {'product_list': product_list})
     else:
         return render(request, 'shop/product_list_basket.html',
                       {'product_list': []})
