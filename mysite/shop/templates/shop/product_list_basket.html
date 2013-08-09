@@ -7,14 +7,14 @@
     <table class="table">
         <thead>
             <tr>
-                <th>#</th>
+                <th>ID</th>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Image</th>
+                <th>Count</th>
             </tr>
         </thead>
         <tbody>
-
     {% if not product_list %}
         <h4>Your basket is empty :(</h4>
     {% else %}
@@ -30,7 +30,7 @@
                     {% else %}
                         <td><img src="/static/images/default.jpg" width="120" height="120" alt="Image not found"></td>
                     {% endif %}
-
+                    <td>{% for key, value in request.session.products_in_basket.items %}{% if key == product.id %}{{ value }}{% endif %}{% endfor %}</td>
                 </tr>
         {% endfor %}
             </tbody>
