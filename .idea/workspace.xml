@@ -4,10 +4,10 @@
     <list default="true" id="f5112be4-92fd-4dc1-b390-17414620100b" name="Default" comment="" />
     <ignored path="projects.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/product_list_basket.html" changelist="f5112be4-92fd-4dc1-b390-17414620100b" time="1375077648871" ignored="false" />
-    <file path="/views.py" changelist="f5112be4-92fd-4dc1-b390-17414620100b" time="1375081767901" ignored="false" />
-    <file path="/urls.py" changelist="f5112be4-92fd-4dc1-b390-17414620100b" time="1375077727379" ignored="false" />
     <file path="/Dummy.txt" changelist="f5112be4-92fd-4dc1-b390-17414620100b" time="1375071946267" ignored="false" />
+    <file path="/urls.py" changelist="f5112be4-92fd-4dc1-b390-17414620100b" time="1375077727379" ignored="false" />
+    <file path="/views.py" changelist="f5112be4-92fd-4dc1-b390-17414620100b" time="1375081767901" ignored="false" />
+    <file path="/product_list_basket.html" changelist="f5112be4-92fd-4dc1-b390-17414620100b" time="1375077648871" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +30,10 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/shop/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="47" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="57" column="30" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,7 +41,7 @@
       <file leaf-file-name="product_list_basket.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/shop/templates/shop/product_list_basket.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="54" selection-start="765" selection-end="765" vertical-scroll-proportion="0.53424656">
+            <state line="20" column="41" selection-start="558" selection-end="558" vertical-scroll-proportion="0.37550202">
               <folding />
             </state>
           </provider>
@@ -48,7 +50,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/mysite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="18" selection-start="4620" selection-end="4620" vertical-scroll-proportion="0.0">
+            <state line="124" column="18" selection-start="4770" selection-end="4770" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -93,8 +95,10 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="23" selection-start="974" selection-end="974" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="19" column="50" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,9 +133,9 @@
         <option value="$PROJECT_DIR$/mysite/shop/templates/base.html" />
         <option value="$PROJECT_DIR$/mysite/shop/templates/shop/application_form.html" />
         <option value="$PROJECT_DIR$/mysite/shop/templates/shop/product_list.html" />
-        <option value="$PROJECT_DIR$/mysite/mysite/urls.py" />
         <option value="$PROJECT_DIR$/mysite/shop/templates/shop/session_basket.html" />
         <option value="$PROJECT_DIR$/mysite/shop/views.py" />
+        <option value="$PROJECT_DIR$/mysite/mysite/urls.py" />
         <option value="$PROJECT_DIR$/mysite/shop/templates/shop/product_list_basket.html" />
       </list>
     </option>
@@ -303,8 +307,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -408,7 +412,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23662885" sideWeight="0.94174755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878444" sideWeight="0.94174755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.058252428" sideWeight="0.9930114" order="7" side_tool="true" content_ui="tabs" />
@@ -516,7 +520,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/mysite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="18" selection-start="4620" selection-end="4620" vertical-scroll-proportion="0.0" />
+        <state line="124" column="18" selection-start="4770" selection-end="4770" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/shop/templates/shop/application_form.html">
@@ -534,9 +538,9 @@
         <state line="10" column="41" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
+    <entry file="file://$PROJECT_DIR$/mysite/shop/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="23" selection-start="974" selection-end="974" vertical-scroll-proportion="0.0" />
+        <state line="42" column="32" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/shop/admin.py">
@@ -544,23 +548,27 @@
         <state line="28" column="20" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/shop/models.py">
+    <entry file="file://$PROJECT_DIR$/mysite/shop/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="32" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="57" column="30" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/shop/views.py">
+    <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="47" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="19" column="50" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/shop/templates/shop/product_list_basket.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="54" selection-start="765" selection-end="765" vertical-scroll-proportion="0.53424656">
+        <state line="20" column="41" selection-start="558" selection-end="558" vertical-scroll-proportion="0.37550202">
           <folding />
         </state>
       </provider>
