@@ -8,6 +8,27 @@
     </head>
 
     <body>
-        {% block content %}{% endblock %}
+    <div class="container">
+        <div class="masthead">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            <li>
+                                <a href="/products/">Каталог товаров</a>
+                            </li>
+                            <li>
+                                <a href="/basket/">Корзина</a>
+                            </li>
+                            <li>
+                                <a href="/apply/">Форма подачи заявки</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% block content %}{% endblock %}
+    </div>
     </body>
 </html>

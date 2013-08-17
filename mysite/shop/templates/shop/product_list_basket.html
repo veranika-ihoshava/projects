@@ -2,20 +2,20 @@
 
 {% block content %}
 
-    <h3>Products in basket</h3>
+    <h3>Корзина</h3>
     <table class="table">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>Count</th>
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Изображение</th>
+                <th>Количество</th>
             </tr>
         </thead>
         <tbody>
     {% if not product_list %}
-        <h4>Your basket is empty :(</h4>
+        <h4>Ваша корзина пуста</h4>
     {% else %}
         <a href="{% url 'shop.views.delete_all_from_basket'%}">Очистить корзину</a>
         {% for product in product_list %}
