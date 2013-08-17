@@ -1,19 +1,29 @@
 from forms import ApplicationForm
 from django.http.response import HttpResponse, HttpResponseRedirect
-from models import Product
+from models import Product, Application
 from django.shortcuts import render
 from django.views.decorators.http import require_GET
+from django.views.generic.edit import FormView
 
 
-def apply_form(request):
-    if request.method == 'POST':
-        form = ApplicationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponse('Saved to database')
-    else:
-        form = ApplicationForm()
-    return render(request, 'shop/application_form.html', {'form': form})
+class ApplicationView(FormView):
+    template_name = 'shop/application_form.html'
+    form_class = ApplicationForm
+    success_url = '/products/'
+
+    def form_valid(self, form):
+        form.save()
+        return super(ApplicationView, self).form_valid(form)
+
+#def apply_form(request):
+#    if request.method == 'POST':
+#        form = ApplicationForm(request.POST)
+#        if form.is_valid():
+#            form.save()
+#            return HttpResponse('Saved to database')
+#    else:
+#        form = ApplicationForm()
+#    return render(request, 'shop/application_form.html', {'form': form})
 
 
 @require_GET

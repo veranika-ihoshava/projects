@@ -3,10 +3,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from shop.models import Product, Product_group
 from django.views.generic import ListView
-from shop.views import apply_form, add_to_basket, delete_from_basket, delete_all_from_basket, session_products
+from shop.views import add_to_basket, delete_from_basket, delete_all_from_basket, session_products, ApplicationView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -27,7 +28,7 @@ urlpatterns = patterns('',
         queryset=Product_group.objects.order_by('name'),
         context_object_name='groups'
     )),
-    url(r'^apply/$', apply_form),
+    url(r'^apply/$', ApplicationView.as_view()),
     url(r'^products/(?P<product_id>\d{1,4})/add/$', add_to_basket),
     url(r'^products/(?P<product_id>\d{1,4})/delete/$', delete_from_basket),
     url(r'^products/all/delete/$', delete_all_from_basket),
