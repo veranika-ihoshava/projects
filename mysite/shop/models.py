@@ -46,3 +46,17 @@ class Application(models.Model):
     login = models.EmailField('E-mail', max_length = 100)
     applied_date = models.DateTimeField(auto_now_add=True)
     checked = models.BooleanField()
+
+class News(models.Model):
+    slug = models.CharField(max_length = 100)
+    name = models.CharField(max_length = 100)
+    body = models.TextField(max_length = 1000)
+    image = models.ImageField(upload_to='images', blank=True)
+    def show_image(self):
+        if self.image:
+            return '<img src="%s" width="120" height="120" alt="Product image">' % self.image.url
+        else:
+            return '<img src="/static/images/default.jpg" width="120" height="120" alt="Image not found">'
+    show_image.allow_tags = True
+    publication_start_at = models.DateTimeField()
+    publication_end_at = models.DateTimeField()

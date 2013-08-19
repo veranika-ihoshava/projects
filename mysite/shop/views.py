@@ -1,6 +1,9 @@
+import datetime
+from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
 from forms import ApplicationForm
-from django.http.response import HttpResponse, HttpResponseRedirect
-from models import Product, Application
+from django.http.response import HttpResponseRedirect
+from models import Product, News
 from django.shortcuts import render
 from django.views.decorators.http import require_GET
 from django.views.generic.edit import FormView
@@ -14,6 +17,17 @@ class ApplicationView(FormView):
     def form_valid(self, form):
         form.save()
         return super(ApplicationView, self).form_valid(form)
+
+
+class NewsListView(ListView):   #override object manager
+    def get_queryset(self):
+        date_time_now = datetime.datetime.now()
+        return News.objects.filter(publication_start_at__lte=date_time_now, publication_end_at__gte=date_time_now)
+
+class NewsDetailView(DetailView):
+    def get_queryset(self):
+        date_time_now = datetime.datetime.now()
+        return News.objects.filter(publication_start_at__lte=date_time_now, publication_end_at__gte=date_time_now)
 
 #def apply_form(request):
 #    if request.method == 'POST':
@@ -73,4 +87,3 @@ def session_products(request):
     else:
         return render(request, 'shop/product_list_basket.html',
                       {'product_list': []})
-

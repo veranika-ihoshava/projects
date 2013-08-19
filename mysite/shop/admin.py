@@ -1,5 +1,6 @@
 from django.contrib import admin
 from shop.models import User, Product, Product_group, Order, Application
+from shop.models import News
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ('name', 'login', 'password')
@@ -28,8 +29,12 @@ class ApplicationAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         return False
 
+class NewsAdmin(admin.ModelAdmin):
+    list_display = 'slug', 'name', 'body', 'show_image', 'publication_start_at', 'publication_end_at'
+
 admin.site.register(User, UserAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Product_group, Product_groupAdmin)
 admin.site.register(Order, OrderAdmin)
 admin.site.register(Application, ApplicationAdmin)
+admin.site.register(News, NewsAdmin)
