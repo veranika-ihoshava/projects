@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Новости</h3>
+
+<table class="table">
+    {% for news in news_list %}
+        <tr class="success">
+            <td><h5><a href="{{news.slug}}">{{ news.name }}</a></h5>
+                <hr>{{ news.body }}
+                <br>{% if news.image %}
+                    <img src="/media/{{ news.image }}" width="600" height="600"></td>
+                {% endif %}
+            </td>
+</tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

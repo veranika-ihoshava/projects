@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Авторизуйтесь на сайте, чтобы оформить заказ</h3>
+
+{% if form.errors %}
+<p style="color: red;">
+    Please correct the error{{ form.errors|pluralize }} below.
+</p>
+{% endif %}
+
+<form action="" method="post">{% csrf_token %}
+    <label for="username">User name:</label>
+    <input type="text" name="username" value="" />
+    <label for="password">Password:</label>
+    <input type="password" name="password" value="" />
+    <input type="hidden" name="next" value="/products/" /><br>
+    <input type="submit" value="Submit" />
+</form>
+
+
+{% endblock %}

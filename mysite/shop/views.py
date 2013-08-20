@@ -1,13 +1,13 @@
 import datetime
+from django.core.mail import send_mail
+from django.http.response import HttpResponseRedirect
+from django.shortcuts import render
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from forms import ApplicationForm
-from django.http.response import HttpResponseRedirect
-from models import Product, News
-from django.shortcuts import render
 from django.views.decorators.http import require_GET
 from django.views.generic.edit import FormView
-
+from forms import ApplicationForm
+from models import Product, News
 
 class ApplicationView(FormView):
     template_name = 'shop/application_form.html'
@@ -16,6 +16,7 @@ class ApplicationView(FormView):
 
     def form_valid(self, form):
         form.save()
+        send_mail('I miss you!', 'I miss you!', 'alesha@dev.by', [form.cleaned_data['login']], fail_silently=True)
         return super(ApplicationView, self).form_valid(form)
 
 
@@ -29,19 +30,11 @@ class NewsDetailView(DetailView):
         date_time_now = datetime.datetime.now()
         return News.objects.filter(publication_start_at__lte=date_time_now, publication_end_at__gte=date_time_now)
 
-#def apply_form(request):
-#    if request.method == 'POST':
-#        form = ApplicationForm(request.POST)
-#        if form.is_valid():
-#            form.save()
-#            return HttpResponse('Saved to database')
-#    else:
-#        form = ApplicationForm()
-#    return render(request, 'shop/application_form.html', {'form': form})
-
 
 @require_GET
 def add_to_basket(request, product_id):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/accounts/login/')
     product_id = int(product_id)
     if Product.objects.filter(id=product_id).exists():
         if 'products_in_basket' in request.session:
@@ -75,7 +68,6 @@ def delete_from_basket(request, product_id='product_id'):
 def delete_all_from_basket(request):
     if 'products_in_basket' in request.session:
         del request.session['products_in_basket']
-#            request.session.modified = True
     return HttpResponseRedirect('/basket/')
 
 

@@ -3,8 +3,14 @@
 {% block content %}
 
     <h3>Корзина</h3>
-    <table class="table">
-        <thead>
+
+    {% if not product_list %}
+        <h4>Ваша корзина пуста</h4>
+    {% else %}
+        <a href="{% url 'shop.views.delete_all_from_basket'%}">Очистить корзину</a>
+
+        <table class="table">
+            <thead>
             <tr>
                 <th>ID</th>
                 <th>Название</th>
@@ -12,12 +18,9 @@
                 <th>Изображение</th>
                 <th>Количество</th>
             </tr>
-        </thead>
-        <tbody>
-    {% if not product_list %}
-        <h4>Ваша корзина пуста</h4>
-    {% else %}
-        <a href="{% url 'shop.views.delete_all_from_basket'%}">Очистить корзину</a>
+            </thead>
+            <tbody>
+
         {% for product in product_list %}
                 <tr class="success">
                     <td>{{ product.id }}</td>

@@ -1,6 +1,6 @@
 from django import forms
 from shop.models import Application
-from django.forms import fields
+
 
 class ApplicationForm(forms.ModelForm):
     class Meta:
